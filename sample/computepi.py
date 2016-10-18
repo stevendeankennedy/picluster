@@ -1,3 +1,4 @@
+# from https://gist.github.com/jcchurch/930276
 from mpi4py import MPI
 
 comm = MPI.COMM_WORLD
