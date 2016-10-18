@@ -1,0 +1,6 @@
+echo $0 running $1
+scp $1 sk@192.168.56.102:$1
+scp $1 sk@192.168.56.103:$1
+mpiexec -np 4 -hostfile mpihosts python $1
+ssh sk@192.168.56.102 rm $1
+ssh sk@192.168.56.103 rm $1
